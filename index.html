@@ -1,183 +1,185 @@
-<!-- index.html
-     Single-file static HTML research website template
-     Instructions: rename to index.html and push to a GitHub repository. On GitHub, enable Pages from the repository settings (main branch / root) or create a gh-pages branch.
--->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Rachel Drake</title>
-  <meta name="description" content="Rachel Drake">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rachel L Drake — Statistical Ecologist</title>
+  <meta name="description" content="Research website of Rachel L Drake, PhD Student in Statistical Ecology at the University of St Andrews.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='white'/><text x='50%' y='55%' font-size='52' text-anchor='middle' fill='%2306402B' font-family='serif'>RD</text></svg>">
   <style>
-    :root{
-      --bg:#0f1724; /* dark navy */
-      --card:#0b1220;
-      --muted:#9aa4b2;
-      --accent:#6ee7b7; /* mint */
-      --glass: rgba(255,255,255,0.03);
-      --maxw:1100px;
-      color-scheme: dark;
+    :root {
+      --accent: #06402B; /* forest green */
+      --text: #111;
+      --bg: #ffffff;
+      font-size: 16px;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#021026 0%, #071226 60%);color:#e6eef6}
-    .wrap{max-width:var(--maxw);margin:32px auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;gap:12px;align-items:center}
-    .avatar{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#032;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
-    h1{margin:0;font-size:1.6rem}
-    p.lead{margin:6px 0 0;color:var(--muted)}
-    nav a{color:var(--muted);text-decoration:none;margin-left:14px}
-    .hero{display:flex;gap:28px;margin-top:28px;align-items:flex-start}
-    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 8px 30px rgba(2,6,23,0.6);flex:1}
-    .hero-left{flex:1}
-    .hero-right{width:320px}
-    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .tag{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:0.85rem;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
-    .pubs-list{list-style:none;padding:0;margin:0}
-    .pubs-list li{padding:12px;border-radius:8px;margin-bottom:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));}
-    .project-card{display:flex;flex-direction:column;gap:8px}
-    .meta{color:var(--muted);font-size:0.9rem}
-    footer{margin-top:40px;color:var(--muted);font-size:0.9rem;text-align:center}
-    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:linear-gradient(90deg,var(--accent),#60a5fa);color:#022;font-weight:600;text-decoration:none}
-    .controls{display:flex;gap:8px;align-items:center}
-    /* responsive */
-    @media(max-width:900px){
-      .grid{grid-template-columns:1fr}
-      .hero{flex-direction:column}
-      .hero-right{width:100%}
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
     }
-    /* simple anchor link highlight */
-    a.section-link{color:inherit;text-decoration:none;border-bottom:2px dashed transparent}
-    a.section-link:hover{border-bottom-color:var(--accent)}
+    header {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #ccc;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+    nav a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--text);
+      font-family: 'Georgia', serif;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: var(--accent);
+      font-family: 'Georgia', serif;
+      font-weight: 600;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 0.3rem;
+    }
+    a {
+      color: var(--accent);
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img.profile {
+      float: right;
+      width: 160px;
+      height: auto;
+      margin: 0 0 1rem 1.5rem;
+      border: 1px solid #ccc;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    footer {
+      border-top: 1px solid #ccc;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #333;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      font-family: 'Georgia', serif;
+      margin-top: 0.5rem;
+    }
+    .btn:hover {
+      background: #043622;
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="avatar">YN</div>
-        <div>
-          <h1>Rachel Drake</h1>
-          <p class="lead">PhD candidate / Researcher in <strong>Ecology & Remote Sensing</strong> — open to collaborations and industry roles</p>
-        </div>
-      </div>
-      <div class="controls">
-        <nav>
-          <a href="#research">Research</a>
-          <a href="#projects">Projects</a>
-          <a href="#publications">Publications</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
+  <header>
+    <div>
+      <h1>Rachel L Drake</h1>
+      <div>PhD Student, University of St Andrews</div>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div class="card hero-left">
-          <h2>About me</h2>
-          <p class="meta">I study how observation processes influence biodiversity monitoring using tools from remote sensing, eBird, and machine learning. I build reproducible workflows in R and Python, and I care about open science.</p>
-          <div class="tags" aria-hidden>
-            <span class="tag">Occupancy modelling</span>
-            <span class="tag">Remote sensing</span>
-            <span class="tag">R / Python</span>
-            <span class="tag">Reproducible research</span>
-            <span class="tag">Data visualisation</span>
-          </div>
+  <main>
+    <section id="about">
+      <img src="headshot.jpg" alt="Rachel Drake" class="profile">
+      <h2>About</h2>
+      <p>PhD candidate in Statistical Ecology at the University of St Andrews, focusing on developing and applying hierarchical and simulation-based models to large, heterogeneous citizen science datasets. Currently modelling sources of observer bias in the eBird citizen science dataset as part of my PhD.</p>
+      <p><strong>Research interests:</strong> Citizen Science, Occupancy Modelling, eBird, Statistical Ecology, R.</p>
+    </section>
 
-          <div class="grid">
-            <div>
-              <h3 id="research">Current research</h3>
-              <p class="meta">Short description of current project. Example: Using Merlin sound-ID + eBird to evaluate detection bias in citizen science datasets and downstream effects on species distribution models.</p>
-              <ul>
-                <li>Supervisor: Dr. Someone</li>
-                <li>Methods: occupancy models, Luna/Terra, species distribution models</li>
-                <li>Data: eBird, Merlin sound ID</li>
-              </ul>
-            </div>
-            <div>
-              <h3 id="projects">Selected projects</h3>
-              <div class="project-card">
-                <strong>Merlin for eBird</strong>
-                <div class="meta">Combining app-derived detections with checklist data to assess detection heterogeneity. <a href="#projects" class="section-link">More →</a></div>
-              </div>
-              <div class="project-card">
-                <strong>Large-scale occupancy visualiser</strong>
-                <div class="meta">Interactive R Shiny app for visualising occupancy/detection facet plots and results.</div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section id="research">
+      <h2>Research</h2>
+      <p><strong>PhD focus:</strong> Species distribution models for citizen science data.</p>
+      <p>Citizen science data is a great source of information about the world. However, in order to properly use this data source we have to account for the lack of formal survey structure. My PhD focuses on how we quantify and account for biases in this data to further understand the natural world.</p>
+      <p><strong>Supervisors:</strong> Dr Alison Johnston, Professor David Borchers.</p>
+    </section>
 
-        <aside class="card hero-right">
-          <h3>Contact & links</h3>
-          <p class="meta">Email: <a href="mailto:you@example.com">you@example.com</a></p>
-          <p class="meta">GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
-          <p class="meta">ORCID: <a href="#">0000-0000-0000-0000</a></p>
+    <section id="projects">
+      <h2>Projects</h2>
+      <h3>Presence of the Merlin Bird Identification App in the eBird Database</h3>
+      <p>The use of automated bird identification apps is changing how citizen scientists collect data, with implications for ecological modelling. This project uses a customised zero-inflated beta family linear mixed model to assess how reporting rates vary across species, observers, and levels of identification experience, revealing heterogeneous effects of app use on detection data.</p>
+      <h3>Quantifying and Modelling Spatiotemporal Trends in Bird Detection Modality</h3>
+      <p>Using archival data from the Macaulay Library (bird photos and audio recordings), this project quantifies how observers detect species and how detection modality changes across space and time. Patterns are modelled as functions of avian phylogeny and environmental interactions, offering insights into how observer behaviour shapes biodiversity datasets.</p>
+    </section>
 
-          <h4 style="margin-top:14px">Quick links</h4>
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <a class="btn" href="#publications">Publications</a>
-            <a class="btn" href="#projects">Projects</a>
-          </div>
-        </aside>
-      </section>
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul>
+        <li>Backstrom, L. J., Drake, R. L., Worthington, H., & Johnston, A. (2025). Detections of rare species lead citizen scientists to initiate data recording. <em>Diversity and Distributions</em>, 31(10), e70103.</li>
+      </ul>
+    </section>
 
-      <section style="margin-top:22px" class="card" id="publications">
-        <h2>Publications</h2>
-        <p class="meta">Selected peer-reviewed papers and preprints. Replace with BibTeX / CSL JSON export if you want automatic rendering.</p>
-        <ul class="pubs-list">
-          <li>
-            <div><strong>Author A, Author B, <em>Your Name</em>.</strong> 2025. Title of paper. <em>Journal name</em>.</div>
-            <div class="meta">DOI or link</div>
-          </li>
-          <li>
-            <div><strong><em>Your Name</em>, Coauthor.</strong> 2024. Title of another paper. <em>Journal</em>.</div>
-            <div class="meta">Preprint / DOI</div>
-          </li>
-        </ul>
-      </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <p><strong>Technical Skills</strong></p>
+      <ul>
+        <li><strong>Programming & Data Analysis:</strong> Proficient in R (tidyverse, ggplot2, terra, luna, ubms, Stan, spOccupancy, spAbundance, ggtree); experience with Python for statistical and mathematical workflows.</li>
+        <li><strong>Statistical Modelling:</strong> Skilled in custom-built GLMMs, occupancy models, and simulation studies designed from real ecological data. Practical experience implementing Bayesian models using Stan.</li>
+        <li><strong>Spatial & Ecological Data:</strong> Experienced with large and complex datasets, including eBird (>4 billion records), the Macaulay Library, British Trust for Ornithology, and landcover databases.</li>
+        <li><strong>Data Management & Quality Assurance:</strong> Managing restricted-access and sensitive datasets, ensuring compliance with ethical and security requirements. Strong command of data cleaning, integration, and quality control workflows.</li>
+        <li><strong>Statistical Communication:</strong> Advanced data visualisation and reporting using R (ggplot2 and custom graphics).</li>
+        <li><strong>Software & Tools:</strong> R, Python, GitHub, Microsoft Office Suite.</li>
+      </ul>
+      <p><strong>Core Skills</strong></p>
+      <ul>
+        <li>Interdisciplinary Collaboration</li>
+        <li>Communication & Stakeholder Engagement</li>
+        <li>Scientific Writing & Reporting</li>
+        <li>Project & Time Management</li>
+        <li>Teamwork & Independence</li>
+        <li>Analytical Agility</li>
+        <li>Knowledge Integration</li>
+      </ul>
+    </section>
 
-      <section style="margin-top:18px" class="card">
-        <h2>Technical skills & tools</h2>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
-          <span class="tag">R (tidyverse, Luna, Terra)</span>
-          <span class="tag">Python (numpy, pandas, scikit-learn)</span>
-          <span class="tag">Bayesian models (Stan, JAGS)</span>
-          <span class="tag">GIS & remote sensing</span>
-          <span class="tag">Reproducible workflows (Git, GitHub, RMarkdown)</span>
-        </div>
-      </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><a href="mailto:rld3@st-andrews.ac.uk">rld3@st-andrews.ac.uk</a></p>
+      <p><a href="https://github.com/racheldrake">GitHub: racheldrake</a></p>
+      <p><a href="https://orcid.org/0009-0006-3517-5793">ORCID: 0009-0006-3517-5793</a></p>
+      <p><a href="https://www.linkedin.com/in/racheldrake02/">LinkedIn: racheldrake02</a></p>
+      <a href="cv.pdf" class="btn">Download CV (PDF)</a>
+    </section>
+  </main>
 
-      <section style="margin-top:18px" class="card" id="contact">
-        <h2>Get in touch</h2>
-        <p class="meta">If you'd like to collaborate, hire me, or request code/data, please email me or open an issue on my GitHub repo.</p>
-        <p><a class="btn" href="mailto:you@example.com?subject=Collaboration%20opportunity">Email me</a></p>
-      </section>
-    </main>
-
-    <footer>
-      <div style="max-width:700px;margin:18px auto;color:var(--muted)">
-        <div>Built with ❤️ — Replace placeholder content with your own name, links, and publications.</div>
-        <div style="margin-top:8px">To deploy: save this file as <code>index.html</code>, push to a GitHub repo, then enable GitHub Pages (branch: main, folder: /). See the repo settings → Pages.</div>
-      </div>
-    </footer>
-  </div>
-
-  <script>
-    // Smooth scrolling for in-page links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        e.preventDefault();
-        const id = a.getAttribute('href').slice(1);
-        const el = document.getElementById(id);
-        if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
-      });
-    });
-  </script>
+  <footer>
+    <div>© 2025 Rachel L Drake | <a href="mailto:rld3@st-andrews.ac.uk">rld3@st-andrews.ac.uk</a> | <a href="https://github.com/racheldrake">GitHub</a> | <a href="https://orcid.org/0009-0006-3517-5793">ORCID</a> | <a href="https://www.linkedin.com/in/racheldrake02/">LinkedIn</a></div>
+  </footer>
 </body>
 </html>
